@@ -379,5 +379,52 @@ section {
 }
 
 /*****************  *****************/
-/*****************  *****************/
+.locate-us {
+  /* height: 80vh; */
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.locate-us h2,
+.locate-us p {
+  margin-bottom: 1rem;
+  color: var(--primary-Color);
+  font-family: var(--font-secundary);
+}
+
+.locate-us h2 {
+  font-size: 4rem;
+}
+
+.locate-us p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.locate {
+  width: 90%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+/***************** footer *****************/
+footer {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  gap: 0.8rem;
+  /* height: 5rem; */
+  color: var(--color-blanco);
+  font-family: var(--font-secundary);
+  background-color: var(--primary-Color);
+}
+
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 8rem;
+  }
+}
+
 /*****************  *****************/
