@@ -13,6 +13,7 @@
 :root {
   --primary-Color: #f47200;
   --color-blanco: #fff;
+  --color-gris: #e2e2e2;
   --color-negro: #000;
   --color-alfaNegro: rgba(0, 0, 0, 0.5);
 
@@ -45,6 +46,11 @@ body {
   /* line-height: 1.5; */
 }
 
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
 img {
   display: block;
   width: 100%;
@@ -64,7 +70,7 @@ img {
 .container {
   width: 90%;
   margin: 0 auto;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .grid-col2 {
@@ -84,9 +90,34 @@ img {
   }
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--color-blanco);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 1.5rem 0;
+}
+
+.card__content__title {
+  color: var(--primary-Color);
+}
+
+.card__content__text {
+  color: var(--color-alfaNegro);
+}
+
 section {
   /* background-color: lightblue; */
-  color: #000;
+  color: rebeccapurple;
   /* min-height: 100vh; */
 }
 /***************** Header *****************/
@@ -265,7 +296,6 @@ section {
 
 /***************** Info Restaurant *****************/
 .info__restaurant {
-  /* height: calc(100vh + 10rem); */
   height: 100vh;
   padding: 5rem;
 }
@@ -305,10 +335,7 @@ section {
 
 /***************** Todays Special *****************/
 .todays__specials {
-  /* height: calc(100vh + 10rem); */
   height: 100vh;
-  /* padding-top: 5rem;
-  padding-bottom: 10rem; */
   background-image: linear-gradient(
       160deg,
       rgba(0, 0, 0, 0.5),
@@ -325,6 +352,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: inherit;
 }
 
 .todays__special__title {
@@ -380,7 +408,6 @@ section {
 
 /*****************  *****************/
 .locate-us {
-  /* height: 80vh; */
   padding: 1.5rem;
   text-align: center;
 }
@@ -406,6 +433,68 @@ section {
   padding: 1rem;
   margin: 0 auto;
 }
+
+/********************************** Pagina Menu **********************************/
+/***************** Hero Menu *****************/
+.hero__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: calc(100vh - 10rem);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url("/img/hero-menu.jpg");
+}
+
+.hero__menu__title {
+  color: var(--primary-Color);
+  font-family: var(--font-secundary);
+  font-size: 3.5rem;
+  text-shadow: -0.5px 1rem 4px rgba(0, 0, 0.5);
+}
+
+.hero__menu__content {
+  color: var(--color-blanco);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/***************** Menu Seccion Platillos *****************/
+.menu-platillo {
+  padding-top: 5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+  background-color: var(--color-gris);
+}
+
+.menu-platillo .title {
+  color: var(--primary-Color);
+  font-family: var(--font-secundary);
+  font-size: 3.5rem;
+}
+
+.menu-platillo .text {
+  color: var(--color-alfaNegro);
+  font-size: 2rem;
+}
+
+.platillos {
+  display: grid;
+  grid-template-columns: 1 1fr;
+  grid-template-rows: auto;
+  gap: 0.8rem;
+  padding: 1.5rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .platillos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /***************** footer *****************/
 footer {
   display: flex;
